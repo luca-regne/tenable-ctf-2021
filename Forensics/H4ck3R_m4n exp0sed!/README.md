@@ -18,5 +18,5 @@ cat supersecure1.bin supersecure2.bin supersecure3.bin supersecure4.bin supersec
 In "compressssion_info.txt":
 ``The password for the compressed file is "bbqsauce"``
 
-Extract image and get the flag :)
+Extract image and get the flag :)</br>
 ![falg2](./supersecure/supersecure_unzip/pickle_nick.png)
