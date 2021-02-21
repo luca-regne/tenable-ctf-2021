@@ -1,5 +1,5 @@
 ## Challenge
-![Challenge](./challenge)
+![Challenge](./challenge.png)
 ## Solution
 ```python
 '''
