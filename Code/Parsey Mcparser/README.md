@@ -1,7 +1,7 @@
-```python
 ## Challenge
 ![Challenge](./challenge)
 ## Solution
+```python
 '''
 :param blob: blob of data to parse through (string)
 :param group_name: A single Group name ("Green", "Red", or "Yellow",etc...)
