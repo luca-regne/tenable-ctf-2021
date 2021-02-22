@@ -1,6 +1,6 @@
 ## Chall
 This chall is a simple Java Web Application.</br> 
-As the chall gave the [source code](./Project) only simple 'code review' is necessary to understand the routes in application and get the first 6 flags.
+As the chall gave the [source code](./Project) only simple 'code review' is necessary to understand the routes in application and get the flags.
 
 ## Flag 1
 
