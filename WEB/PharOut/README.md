@@ -71,7 +71,7 @@ class Wrapper
 
 ## Exploit
 
-At first change the `private $doit` to `public $doit` in class Wrapper, then generate code a [phar generator](./phar_creator.php) based on this class to upload a file and trigger the PHP Deserialization.
+At first change the `private $doit` to `public $doit` in class Wrapper, then code a [phar generator](./phar_creator.php) based on this class to upload a file and trigger the PHP Deserialization.
 
 ```php
 <?php
