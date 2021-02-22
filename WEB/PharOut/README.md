@@ -104,7 +104,7 @@ php -c php.ini phar_creator.php
 
 ### Upload file
 
-Upload a [exploit.phar](./exploit.phar) in page and with proxy change the value `f` in paramater `s` to value `p` to upload a `phar://` instead of `file://`. Check it in: [Index.php](./index.php).
+Upload a [exploit.phar](./exploit.phar) in page and with proxy change the value `f` in paramater `s` to value `p`, uploading a `phar://` instead of `file://`(as show in [index code](./index.php)).
 
 ### Flag
 ![Flag](./flag.png)
